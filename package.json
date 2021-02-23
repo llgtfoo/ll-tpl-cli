@@ -1,0 +1,33 @@
+{
+  "name": "ll-tpl-cli",
+  "version": "1.0.2",
+  "description": "cli 模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/llgtfoo/ll-tpl-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "tpl": "./index.js"
+  },
+  "dependencies": {
+    "@ourea/eslint-config-tq": "^0.0.2",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "cli-table2": "^0.2.0",
+    "commander": "^6.2.0",
+    "cross-spawn": "^7.0.3",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.0",
+    "handlebars": "^4.7.6",
+    "inquirer": "^7.3.3",
+    "log-symbols": "^4.0.0",
+    "ora": "^5.1.0"
+  }
+}
