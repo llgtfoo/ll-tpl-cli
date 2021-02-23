@@ -55,7 +55,7 @@ module.exports = download = (url, dir, callback) => {
         },
       ]).then(answers => {
         snpper.start()
-        console.log(answers, url, dir)
+        // console.log(answers, url, dir)
         downloadTo(url, dir,
           function (err) {
             if (err) {

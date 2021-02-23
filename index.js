@@ -85,10 +85,10 @@ program
             if (!child.error) {
               snpper.succeed(log.success('依赖下载成功！'))
               const table = new Table()
-              table.push(['===================================='])
+              // table.push(['-------------------------------------'])
               table.push([log.info(`cd ${name}`)])
               table.push([log.info('npm run serve')])
-              table.push(['===================================='])
+              // table.push(['===================================='])
               console.log(table.toString())
             } else {
               snpper.fail(log.warning('依赖自动下载失败！'))
