@@ -1,6 +1,6 @@
 {
   "name": "ll-tpl-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "cli 模板",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/llgtfoo/ll-tpl-cli.git"
+    "url": "https://github.com/llgtfoo/ll-tpl-cli.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bin": {
@@ -29,5 +28,12 @@
     "inquirer": "^7.3.3",
     "log-symbols": "^4.0.0",
     "ora": "^5.1.0"
-  }
+  },
+  "keywords": [
+    "项目模板",
+    "模块化",
+    "vue项目模板",
+    "tpl",
+    "vue3.0模板"
+  ]
 }
