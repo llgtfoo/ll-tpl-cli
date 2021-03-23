@@ -1,6 +1,6 @@
 {
   "name": "ll-tpl-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "cli 模板",
   "main": "index.js",
   "scripts": {
