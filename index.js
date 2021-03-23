@@ -19,33 +19,7 @@ const figlet = require('figlet')
 const { log } = require('./plugins/log.js')//日志输出
 const download = require('./plugins/download.js')
 // const { success } = require('log-symbols')//图标
-const templateList = {
-  'screen-tpl': {
-    'name': 'screen-template',
-    'url': 'https://github.com/llgtfoo/screen-template.git#master',
-    'downloadUrl': 'direct:https://github.com/llgtfoo/screen-template.git',
-    'downloadZip': 'direct:https://github.com/llgtfoo/screen-template/archive/master.zip',
-    'use': '大屏项目模板',
-    'description': '大屏项目模板,内置尺寸缩放插件、echarts动画函数等',
-  },
-  'page-tpl-mutil': {
-    'name': 'page-template',
-    'url': 'https://github.com/llgtfoo/page-template.git#master',
-    'downloadUrl': 'direct:https://github.com/llgtfoo/page-template.git#master',
-    'downloadZip': 'direct:https://github.com/llgtfoo/page-template/archive/master.zip',
-    'use': '多模块项目模板',
-    'description': '多模块项目模板,顶部一级菜单切导航,左侧二级菜单切换页面',
-  },
-  'page-tpl-single': {
-    'name': 'page-template',
-    'url': 'https://github.com/llgtfoo/page-template.git#single',
-    'downloadUrl': 'direct:https://github.com/llgtfoo/page-template.git#single',
-    'downloadZip': 'direct:https://github.com/llgtfoo/page-template/archive/single.zip',
-    'use': '单模块项目模板',
-    'description': '单模块项目模板，左侧菜单切换页面',
-  },
-
-}//模板链接
+const templateList = require('./template.json')//模板json
 program
   .version(require('./package.json').version)
 clear()
@@ -105,12 +79,12 @@ program
   .description('可用模板列表...')
   .action(() => {
     const table = new Table({
-      head: ['模板名称', '模板描述', '模板描述'],
+      head: ['模板名称', '版本', '模板描述', '模板描述'],
     })
     // eslint-disable-next-line guard-for-in
     for (const key in templateList) {
       table.push(
-        [templateList[key].name, templateList[key].use, templateList[key].description]
+        [templateList[key].name, templateList[key].version, templateList[key].use, templateList[key].description]
       )
     }
     console.log(table.toString())
