@@ -43,7 +43,7 @@ program
             const done = this.async()
             const options = Object.values(templateList).map(v => {
               return {
-                name: `${v.use}(${v.name})(${chalk.magenta.bold.underline(v.description)})`,
+                name: `${v.use}(${v.name})[${v.version}](${chalk.magenta.bold.underline(v.description)})`,
                 value: v,
               }
             })
