@@ -79,7 +79,7 @@ program
   .description('可用模板列表...')
   .action(() => {
     const table = new Table({
-      head: ['模板名称', '版本', '模板描述', '模板描述'],
+      head: ['模板名称', '版本', '模板描述', '描述'],
     })
     // eslint-disable-next-line guard-for-in
     for (const key in templateList) {

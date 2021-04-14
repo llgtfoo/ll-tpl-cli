@@ -5,7 +5,7 @@
         "downloadUrl": "direct:https://github.com/llgtfoo/screen-template.git",
         "downloadZip": "direct:https://github.com/llgtfoo/screen-template/archive/master.zip",
         "use": "大屏项目模板",
-        "description": "大屏项目模板,内置尺寸缩放插件、echarts动画函数等",
+        "description": "数据大屏项目模板,内置尺寸缩放插件",
         "version": "vue2.0"
     },
     "page-tpl-mutil": {
@@ -14,7 +14,7 @@
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template.git#master",
         "downloadZip": "direct:https://github.com/llgtfoo/page-template/archive/master.zip",
         "use": "多模块项目模板",
-        "description": "多模块项目模板,顶部一级菜单切导航,左侧二级菜单切换页面",
+        "description": " 顶部切换模块，左侧菜单切换页面,路由守卫",
         "version": "vue2.0"
     },
     "page-tpl-single": {
@@ -32,7 +32,7 @@
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new.git#vue+ts",
         "downloadZip": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts.zip",
         "use": "单模块项目模板",
-        "description": "左侧菜单切换页面,路由守卫，一键换肤以及一系列组件和指令封装",
+        "description": "左侧菜单切换页面,路由守卫",
         "version": "vue3.0+ts"
     },
     "page-tpl-multi-ts": {
@@ -41,7 +41,7 @@
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new.git#vue+ts+multi",
         "downloadZip": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts+multi.zip",
         "use": "多模块项目模板",
-        "description": "顶部切换模块，左侧菜单切换页面,路由守卫，一键换肤以及一系列组件和指令封装",
+        "description": "顶部切换模块，左侧菜单切换页面,路由守卫",
         "version": "vue3.0+ts"
     },
     "page-tpl-single-vue": {
@@ -50,7 +50,16 @@
         "downloadUrl": "https://github.com/llgtfoo/page-template-new.git#noTs",
         "downloadZip": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/noTs.zip",
         "use": "单模块项目模板",
-        "description": "左侧菜单切换页面,路由守卫，一键换肤以及一系列组件和指令封装",
+        "description": "左侧菜单切换页面,路由守卫",
         "version": "vue3.0"
+    },
+    "page-tpl-vite-vue": {
+        "name": "page-template-vite",
+        "url": "https://github.com/llgtfoo/page-template-new.git#vite+vue",
+        "downloadUrl": "https://github.com/llgtfoo/page-template-new.git#vite+vue",
+        "downloadZip": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vite+vue.zip",
+        "use": "单模块项目模板",
+        "description": "左侧菜单切换页面,路由守卫",
+        "version": "vue3.0+vite2.0"
     }
 }
