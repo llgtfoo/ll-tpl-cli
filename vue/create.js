@@ -3,9 +3,9 @@
  * @Description: tpl create 指令创建模板
  * @Author: llgtfoo
  * @Date: 2021-10-14 08:38:09
- * @LastEditTime: 2021-10-14 15:51:00
+ * @LastEditTime: 2021-10-14 17:04:59
  * @LastEditors: llgtfoo
- * @FilePath: \ll-tpl-cli-pro\vue\create.js
+ * @FilePath: \ll-tpl-cli\vue\create.js
  */
 const fs = require('fs-extra')
 const path = require('path')
