@@ -1,98 +1,67 @@
 /*
- * @Descripttion: '下载模板'
- * @Author: lilong(lilong@hztianque.com)
- * @Date: 2020-12-02 17:34:52
- * @LastEditTime: 2020-12-03 20:22:46
+ * @Description: github下载模板
+ * @Author: llgtfoo
+ * @Date: 2021-10-14 10:58:10
+ * @LastEditTime: 2021-10-14 16:11:00
+ * @LastEditors: llgtfoo
+ * @FilePath: \ll-tpl-cli-pro\plugins\download.js
  */
+const fs = require('fs-extra')
 const inquirer = require('inquirer')//问答交互
 const downloadTo = require('download-git-repo')//git clone 代码
 const { log } = require('./log.js')//日志输出
 const ora = require('ora')//loading效果
-const fs = require('fs')
 const handlebars = require('handlebars')//模板处理器
 const spawn = require('cross-spawn')
+const path = require('path')
+const chalk = require('chalk')//字体改变
 
-/**
- * @name: 模板下载(download)
- * @param {url:下载url,dir:文件夹,callback：回调}
- * @return: callback：回调(成功true,失败：false)
- */
-module.exports = download = (url, dir, callback) => {
-  //删除下载的模板
-  deleteFolder = async function (path) {
-    let files = []
-    if (fs.existsSync(path)) {
-      files = fs.readdirSync(path)
-      files.forEach(function (file) {
-        const curPath = `${path}/${file}`
-        if (fs.statSync(curPath).isDirectory()) { // recurse
-          deleteFolder(curPath)
-        } else { // delete file
-          fs.unlinkSync(curPath)
-        }
-      })
-      fs.rmdirSync(path)
-    }
-  }
-  const snpper = ora((log.info('正在创建模板...'))).start()
-  try {
-    setTimeout(() => {
-      if (fs.existsSync(dir)) {
-        snpper.fail(log.warning('项目名称已存在,模板创建失败...'))
-        callback(false)
-        return
-      }
-      snpper.stop()
-      inquirer.prompt([
+module.exports = function download({ template }, targetDir, callback) {
+    const snpper = ora((log.info('Initializing the Create project template...')))
+    console.log(`
+    `)
+    inquirer.prompt([
         {
-          type: 'input',
-          name: 'description',
-          message: '请输入项目描述：',
+            type: 'input',
+            name: 'description',
+            message: '请输入项目描述：',
         }, {
-          type: 'input',
-          name: 'author',
-          message: '请输入项目作者：',
+            type: 'input',
+            name: 'author',
+            message: '请输入项目作者：',
         },
-      ]).then(answers => {
+    ]).then(answers => {
+        console.log(`Creating project in ${chalk.cyan(targetDir)}.`)
         snpper.start()
-        // console.log(answers, url, dir)
-        downloadTo(url, dir,
-          function (err) {
+        downloadTo(template.downloadUrl, targetDir, function (err) {
             if (err) {
-              console.log(err)
-              snpper.fail(log.warning('模板创建失败...'))
-              callback(false)
-              return
-            } else {
-              try {
-                const obj = { ...answers, name: dir }
-                const fileContent = fs.readFileSync(`${dir}/package.json`, 'utf8')
-                const fileResult = handlebars.compile(fileContent)(obj)
-                const result = fs.writeFileSync(`${dir}/package.json`, fileResult)
-                if (!result) {
-                  snpper.succeed(log.success('模板创建成功!!!'))
-                  spawn.sync('git', ['init'], { stdio: 'inherit', cwd: `./${dir}` })
-                  callback(true)
-                } else {
-                  const path = `${dir}`
-                  deleteFolder(path)
-                  snpper.fail(log.warning('模板创建失败...'))
-                  callback(false)
-                }
-              } catch (error) {
-                const path = `${dir}`
-                deleteFolder(path)
-                snpper.fail(log.warning('模板创建失败...'))
+                console.log(err)
+                snpper.fail(log.warning('Failed to create the project template...'))
+                console.log()
                 callback(false)
-              }
+                return
+            } else {
+                try {
+                    const cwd = process.cwd()
+                    const obj = { ...answers, name: path.relative(cwd, targetDir) }
+                    const fileContent = fs.readFileSync(`${targetDir}/package.json`, 'utf8')
+                    const fileResult = handlebars.compile(fileContent)(obj)
+                    const result = fs.writeFileSync(`${targetDir}/package.json`, fileResult)
+                    if (!result) {
+                        snpper.succeed(log.success('The project template is created successfully!'))
+                        spawn.sync('git', ['init'], { stdio: 'inherit', cwd: targetDir })
+                        callback(true)
+                    } else {
+                        // fs.remove(targetDir)
+                        snpper.fail(log.warning('Failed to create the project template...'))
+                        callback(false)
+                    }
+                } catch {
+                    fs.remove(targetDir)
+                    snpper.fail(log.warning('Failed to create the project template...'))
+                    callback(false)
+                }
             }
-          })
-      })
-    }, 2000)
-  } catch (error) {
-    const path = `${dir}`
-    deleteFolder(path)
-    snpper.fail(log.warning('模板创建失败...'))
-    callback(false)
-  }
+        })
+    })
 }

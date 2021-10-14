@@ -1,0 +1,58 @@
+{
+    "page-tpl-screen": {
+        "name": "page-screen-vue2.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/screen.zip",
+        "type": "screen",
+        "version": "vue2.0",
+        "description": "数据展示组件库使用@jiaminghi/data-view,大屏自适应尺寸缩放指令及组件封装"
+    },
+    "page-tpl-multi-element": {
+        "name": "page-multiple-vue2.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/element.zip",
+        "type": "multiple",
+        "version": "vue2.0",
+        "description": "顶部切换模块,左侧菜单切换页面,UI是element"
+    },
+    "page-tpl-single-element": {
+        "name": "page-single-vue2.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/element-single.zip",
+        "type": "single",
+        "version": "vue2.0",
+        "description": "左侧菜单切换页面,UI是element"
+    },
+    "page-tpl-multi-element-vue": {
+        "name": "page-multiple-vue3.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue3.0/element.zip",
+        "type": "multiple",
+        "version": "vue3.0",
+        "description": "顶部切换模块,左侧菜单切换页面,UI是element-plus"
+    },
+    "page-tpl-single-ts": {
+        "name": "page-single-vue3.0/ts",
+        "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts.zip",
+        "type": "single",
+        "description": "左侧菜单切换页面,UI是ant-design-vue2.0",
+        "version": "vue3.0+ts"
+    },
+    "page-tpl-multi-ts": {
+        "name": "page-multiple-vue3.0/ts",
+        "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts+multi.zip",
+        "type": "multiple",
+        "description": "顶部切换模块,左侧菜单切换页面,UI是ant-design-vue2.0",
+        "version": "vue3.0+ts"
+    },
+    "page-tpl-single-vue": {
+        "name": "page-single-vue3.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/noTs.zip",
+        "type": "single",
+        "description": "左侧菜单切换页面,UI是ant-design-vue2.0",
+        "version": "vue3.0"
+    },
+    "page-tpl-vite-vue": {
+        "name": "page-single-vite",
+        "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vite+vue.zip",
+        "type": "single",
+        "description": "左侧菜单切换页面,UI是ant-design-vue2.0",
+        "version": "vue3.0+vite2.0"
+    }
+}
