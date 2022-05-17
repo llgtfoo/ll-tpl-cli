@@ -1,5 +1,6 @@
 {
     "page-tpl-screen": {
+        "index": "①",
         "name": "page-screen-vue2.0",
         "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/screen.zip",
         "type": "screen",
@@ -7,6 +8,7 @@
         "description": "数据展示组件库使用@jiaminghi/data-view,大屏自适应尺寸缩放指令及组件封装"
     },
     "page-tpl-multi-element": {
+        "index": "②",
         "name": "page-multiple-vue2.0",
         "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/element.zip",
         "type": "multiple",
@@ -14,6 +16,7 @@
         "description": "顶部切换模块,左侧菜单切换页面,UI是element"
     },
     "page-tpl-single-element": {
+        "index": "③",
         "name": "page-single-vue2.0",
         "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue2.0/element-single.zip",
         "type": "single",
@@ -21,13 +24,23 @@
         "description": "左侧菜单切换页面,UI是element"
     },
     "page-tpl-multi-element-vue": {
+        "index": "④",
         "name": "page-multiple-vue3.0",
         "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue3.0/element.zip",
         "type": "multiple",
         "version": "vue3.0",
         "description": "顶部切换模块,左侧菜单切换页面,UI是element-plus"
     },
+    "page-tpl-single-element-vue": {
+        "index": "⑤",
+        "name": "page-single-vue3.0",
+        "downloadUrl": "direct:https://github.com/llgtfoo/tpl-hr-vue/archive/refs/heads/vue3.0/element-single.zip",
+        "type": "single",
+        "version": "vue3.0",
+        "description": "左侧菜单切换页面,UI是element-plus"
+    },
     "page-tpl-single-ts": {
+        "index": "⑥",
         "name": "page-single-vue3.0/ts",
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts.zip",
         "type": "single",
@@ -35,6 +48,7 @@
         "version": "vue3.0+ts"
     },
     "page-tpl-multi-ts": {
+        "index": "⑦",
         "name": "page-multiple-vue3.0/ts",
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vue+ts+multi.zip",
         "type": "multiple",
@@ -42,6 +56,7 @@
         "version": "vue3.0+ts"
     },
     "page-tpl-single-vue": {
+        "index": "⑧",
         "name": "page-single-vue3.0",
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/noTs.zip",
         "type": "single",
@@ -49,6 +64,7 @@
         "version": "vue3.0"
     },
     "page-tpl-vite-vue": {
+        "index": "⑨",
         "name": "page-single-vite",
         "downloadUrl": "direct:https://github.com/llgtfoo/page-template-new/archive/refs/heads/vite+vue.zip",
         "type": "single",
