@@ -21,6 +21,7 @@
 | page-multiple-vue2.0    | vue2.0         | multiple | 顶部切换模块,左侧菜单切换页面,UI是element                    |
 | page-single-vue2.0      | vue2.0         | single   | 左侧菜单切换页面,UI是element                                 |
 | page-multiple-vue3.0    | vue3.0         | multiple | 顶部切换模块,左侧菜单切换页面,UI是element-plus               |
+| page-single-vue3.0      | vue3.0         | single   | 左侧菜单切换页面,UI是element-plus                           |
 | page-single-vue3.0/ts   | vue3.0+ts      | single   | 左侧菜单切换页面,UI是ant-design-vue2.0                       |
 | page-multiple-vue3.0/ts | vue3.0+ts      | multiple | 顶部切换模块,左侧菜单切换页面,UI是ant-design-vue2.0          |
 | page-single-vue3.0      | vue3.0         | single   | 左侧菜单切换页面,UI是ant-design-vue2.0                       |
