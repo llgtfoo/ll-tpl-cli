@@ -1,6 +1,6 @@
 {
-  "name": "ll-tpl-cli",
-  "version": "2.0.0",
+  "name": "only-tpl-cli",
+  "version": "1.0.0",
   "description": "cli 模板",
   "main": "index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "vue项目模板",
     "tpl",
     "vue3.0模板",
-    "llgtfoo"
+    "llgtfoo",
+    "only"
   ]
 }
